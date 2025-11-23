@@ -9,14 +9,14 @@
 import marimo
 
 __generated_with = "0.18.0"
-app = marimo.App(width="medium", layout_file="layouts/gpx_viewer.grid.json")
+app = marimo.App(width="medium", layout_file="layouts/GPX_viewer.grid.json")
 
 
 @app.cell
 def _():
     import geopandas as gpd
     import folium
-    from folium.plugins import MousePosition
+    # from folium.plugins import MousePosition
     import marimo as mo
 
 
@@ -61,7 +61,7 @@ def _(MousePosition, f, folium, gpd):
 
         # C. Automatically fit the map bounds to the track
         m.fit_bounds(m.get_bounds())
-        MousePosition().add_to(m)
+        # MousePosition().add_to(m)
     return (m,)
 
 
