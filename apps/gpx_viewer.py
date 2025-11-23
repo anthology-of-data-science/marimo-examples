@@ -9,7 +9,7 @@
 import marimo
 
 __generated_with = "0.18.0"
-app = marimo.App(width="medium", layout_file="layouts/GPX_viewer.grid.json")
+app = marimo.App(width="medium", layout_file="layouts/gpx_viewer.grid.json")
 
 
 @app.cell
