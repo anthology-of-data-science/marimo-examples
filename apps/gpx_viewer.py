@@ -1,7 +1,15 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "folium>=0.20.0",
+#     "geopandas>=1.1.1",
+#     "marimo==0.13.15",
+# ]
+# ///
 import marimo
 
 __generated_with = "0.18.0"
-app = marimo.App(width="medium", layout_file="layouts/gpx-viewer.grid.json")
+app = marimo.App(width="medium", layout_file="layouts/gpx_viewer.grid.json")
 
 
 @app.cell
@@ -36,7 +44,6 @@ def _(MousePosition, f, folium, gpd):
         # GeoPandas/Shapely stores them as (Longitude, Latitude).
         # We extract them into a list of tuples: [(lat, lon), (lat, lon), ...]
         track_coordinates = [(point.y, point.x) for point in gdf.geometry]
-
 
         # Initialize the map centered on the starting point of the track
         start_coords = track_coordinates[0]
