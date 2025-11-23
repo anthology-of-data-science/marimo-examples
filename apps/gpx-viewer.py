@@ -1,7 +1,7 @@
 import marimo
 
-__generated_with = "0.15.2"
-app = marimo.App(width="medium", layout_file="layouts/gpx-on-folium.grid.json")
+__generated_with = "0.18.0"
+app = marimo.App(width="medium", layout_file="layouts/gpx-viewer.grid.json")
 
 
 @app.cell
